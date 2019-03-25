@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="450dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:id="@+id/tv_title"
+        android:textSize="@dimen/dimen_18dp"
+        android:text="模拟考两次"
+        android:textColor="@color/color_000000"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_info"
+            android:textSize="@dimen/dimen_16dp"
+            android:text="及配件穿丝袜，从我是从麻婆看出我承诺及，快拍【看我产品【让我看快拍【库存品【认为村民们， 跑【快拍【陈伟才可怕【"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+
+</LinearLayout>

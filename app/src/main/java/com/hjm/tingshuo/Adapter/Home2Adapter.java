@@ -1,0 +1,55 @@
+package com.hjm.tingshuo.Adapter;
+
+import android.content.Context;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+import com.hjm.tingshuo.Bean.MusicBean;
+import com.hjm.tingshuo.Bean.MusicInfoBean;
+import com.hjm.tingshuo.R;
+
+import java.util.List;
+
+
+/**
+ * Created by linghao on 2018/10/17.
+ */
+
+public class Home2Adapter extends BaseQuickAdapter<MusicInfoBean.DataBean,BaseViewHolder>{
+
+    private Context mContext;
+
+    public Home2Adapter(@Nullable List<MusicInfoBean.DataBean> data,Context context) {
+        super(R.layout.item_music, data);
+        this.mContext = context;
+    }
+
+
+    @Override
+    protected void convert(BaseViewHolder helper, MusicInfoBean.DataBean item) {
+
+        ImageView imageView = helper.getView(R.id.iv_photo);
+        Glide.with(mContext).load(item.getPic())
+                .asBitmap()
+                .error(R.drawable.ic_load_error)
+                .diskCacheStrategy(DiskCacheStrategy.RESULT)
+                .placeholder(R.mipmap.ic_launcher)
+                .into(imageView);
+
+
+        helper.setText(R.id.tv_songname,item.getTitle())
+                .setText(R.id.tv_singername,item.getInfo())
+                .addOnClickListener(R.id.lv_all)
+                .setVisible(R.id.iv_sign,false);
+    }
+
+
+}

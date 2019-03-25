@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_show"
+        android:background="@drawable/ic_play_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_340dp">
+        <ImageView
+            android:id="@+id/iv_play_exit"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:layout_marginLeft="@dimen/dimen_12dp"
+            android:src="@drawable/ic_play_bg_image"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp" />
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dimen_40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/iv_play_mode_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <Button
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_160dp"
+            android:layout_marginLeft="@dimen/dimen_150dp"
+            android:text="加载歌词中...."
+            android:textColor="@color/color_5B5B5B"
+            android:background="@color/color_transparent"
+            android:id="@+id/btn_play_download_lrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.hjm.tingshuo.MyView.LyricView
+            android:id="@+id/slv_play_show_lrc"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_80dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginBottom="@dimen/dimen_40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/rl_show"
+        android:id="@+id/ll_progress"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:id="@+id/sb_play_position"
+            android:paddingStart="@dimen/dimen_0dp"
+            android:paddingEnd="@dimen/dimen_0dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_28dp">
+            <TextView
+                android:id="@+id/tv_play_current_duration"
+                android:layout_marginLeft="@dimen/dimen_6dp"
+                android:text="00:00"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_play_duration"
+                android:layout_marginRight="@dimen/dimen_6dp"
+                android:text="00:00"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_play_name"
+            android:text="歌名"
+            android:textSize="@dimen/dimen_20dp"
+            android:textAlignment="center"
+            android:textColor="@color/color_000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_play_author"
+            android:layout_marginTop="@dimen/dimen_6dp"
+            android:text="歌手"
+            android:textSize="@dimen/dimen_16dp"
+            android:textAlignment="center"
+            android:textColor="@color/color_000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_marginLeft="@dimen/dimen_80dp"
+        android:layout_marginRight="@dimen/dimen_80dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_below="@id/ll_progress"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp">
+        <ImageView
+            android:id="@+id/iv_play_love"
+            android:layout_weight="1"
+            android:src="@drawable/ic_song_no_collection"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp" />
+        <ImageView
+            android:id="@+id/iv_song_download"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:src="@drawable/ic_song_no_download"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp" />
+        <ImageView
+            android:id="@+id/iv_play_lrc"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:src="@drawable/ic_play_lrc"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp" />
+        <ImageView
+            android:id="@+id/iv_recommend"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:src="@drawable/ic_recommend"
+            android:layout_width="@dimen/dimen_36dp"
+            android:layout_height="@dimen/dimen_36dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp">
+            <ImageView
+                android:id="@+id/iv_play_pre"
+                android:src="@drawable/ic_play_pre"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp" />
+        </LinearLayout>
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="@dimen/dimen_40dp">
+            <ImageView
+                android:id="@+id/iv_play_playing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp">
+            <ImageView
+                android:id="@+id/iv_play_next"
+                android:src="@drawable/ic_play_next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

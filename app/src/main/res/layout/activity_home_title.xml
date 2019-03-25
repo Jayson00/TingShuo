@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/color_EE0000"
+    android:layout_height="80dp">
+    <LinearLayout
+        android:paddingTop="@dimen/dimen_26dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:src="@drawable/ic_home_title"
+            android:layout_width="@dimen/dimen_40dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:paddingLeft="@dimen/dimen_8dp"
+            android:paddingTop="@dimen/dimen_6dp"
+            android:text="听说"
+            android:textSize="@dimen/dimen_20dp"
+            android:textColor="@color/color_FFFFFF"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_skip_classification"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:src="@drawable/ic_home_classification"
+            android:layout_width="@dimen/dimen_24dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_skip_friend"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:src="@drawable/ic_home_friend"
+            android:layout_width="@dimen/dimen_26dp"
+            android:layout_height="match_parent" />
+        <ImageView
+            android:id="@+id/iv_skip_search"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:src="@drawable/ic_home_search"
+            android:layout_width="@dimen/dimen_24dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

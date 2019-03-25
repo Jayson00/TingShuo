@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_50dp"
+    android:id="@+id/lv_all"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+
+    <ImageView
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:id="@+id/iv_show_photo"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="@dimen/dimen_36dp"
+        android:layout_height="@dimen/dimen_36dp" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+        <TextView
+            android:singleLine="true"
+            android:text="11111111"
+            android:id="@+id/tv_fri_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_14dp" />
+        <TextView
+            android:id="@+id/tv_advice"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:text="请求添加好友"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_10dp" />
+    </LinearLayout>
+    <TextView
+        android:text="新消息提醒"
+        android:textStyle="bold"
+        android:layout_marginRight="@dimen/dimen_16dp"
+        android:textColor="@color/color_000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
